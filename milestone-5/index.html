@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shareable Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS('particles-js', {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 5,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+            },
+        },
+    });
+</script>
+
+
+    <h1> Shareable Resume Builder</h1>
+    <form id="resume-form"> 
+        <fieldset>
+            <legend> Personal Information</legend>
+
+            <lable for="username"> Username:</lable>
+            <input type="text" id="username" placeholder="Enter Your username" required>
+
+            <lable for="name"> Name:</lable>
+            <input type="text" id="name" placeholder="Enter Your name" required>
+
+            <lable for="email"> Email:</lable>
+            <input type="email" id="email" placeholder="Enter Your email" required>
+
+            <lable for="Phone"> Phone:</lable>
+            <input type="tel" id="phone" placeholder="Enter Your number" required>
+        </fieldset>
+
+        <fieldset>
+               <legend> Education </legend>
+               <lable for="education"> Education:</lable>
+            <textarea id="education" placeholder="Enter Your Education" rows="5" required></textarea>
+        </fieldset>
+        
+        <fieldset> 
+            <legend> Experience </legend>
+            <lable for="experience"> Experience:</lable>
+            <textarea id="experience" placeholder="Enter Your Work Experience" rows="5" required></textarea>
+        </fieldset>
+
+        <fieldset> 
+            <legend> Skills </legend>
+            <lable for="skills"> Skills:</lable>
+            <textarea id="skills" placeholder="Enter Your Skills" rows="5" required></textarea>
+        </fieldset>
+
+        <button type="submit"> <b> Generate Resume </b></button>
+    </form>
+    <br> 
+    <!-- Dynamic and Editable Resume -->
+    <div id="resume-display"  contenteditable="true"> </div>
+
+    <br>
+    <!-- shareable, link and download option -->
+     <div id="shareable-link-container" style="display: none;">
+       <h2> Shareable Link</h2>
+       <p> "View or edit your resume with this unique link"</p>
+       <a href="#" id="shareable-link" target="_blank"></a>
+       <br>
+       <button id="download-pdf"> <b> Download as PDF</b></button>
+     </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
